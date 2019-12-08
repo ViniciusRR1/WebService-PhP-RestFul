@@ -27,11 +27,10 @@ class Core {
 
         }else{
             $currentController = 'homeController';
-            $currentAction = 'index.php';
+            $currentAction = 'index';
         }
-
         $c = new $currentController();
-        call_user_func_array(array($c, $currentAction), $param);
+        call_user_func_array(array($c, $currentAction), $params);
 
 
     }
